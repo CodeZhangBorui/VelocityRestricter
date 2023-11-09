@@ -1,6 +1,5 @@
 package com.codezhangborui.velocityrestricter;
 
-import com.velocitypowered.api.event.PostOrder;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.player.ServerPreConnectEvent;
 import net.kyori.adventure.text.Component;
@@ -14,7 +13,7 @@ public class ServerPreConnectListener {
         this.logger = logger;
     }
 
-    @Subscribe(order = PostOrder.FIRST)
+    @Subscribe
     public void onServerPreConnect(ServerPreConnectEvent event) {
         if(!event.getPlayer().hasPermission("velocityrestricter." + event.getOriginalServer().getServerInfo().getName())) {
             logger.info("Player " + event.getPlayer().getUsername() + " does not have permission to connect to server " + event.getOriginalServer().getServerInfo().getName());
