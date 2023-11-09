@@ -8,11 +8,9 @@ import org.slf4j.Logger;
 
 public class ServerPreConnectListener {
 
-    private final ServerPreConnectEvent event;
     private final Logger logger;
 
     public ServerPreConnectListener(ServerPreConnectEvent event, Logger logger) {
-        this.event = event;
         this.logger = logger;
     }
 
