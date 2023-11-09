@@ -17,10 +17,10 @@ import org.slf4j.Logger;
 )
 public class VelocityRestricter {
 
-    @Inject
-    private final Logger logger;
+    private Logger logger;
     private final ProxyServer server;
 
+    @Inject
     public VelocityRestricter(ProxyServer server, Logger logger) {
         this.server = server;
         this.logger = logger;
